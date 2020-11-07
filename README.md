@@ -29,3 +29,6 @@ To do so:
 `curl -i http://localhost:5000/`
 
 You should get back a JSON payload. 
+
+### Testing the sample-app locally:
+If you'd like to test the application run the pytest command in the working directory space. 

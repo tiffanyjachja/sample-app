@@ -1,7 +1,7 @@
 # Sample-app: A Cloud Native Engineering Exercise
 
 This repo includes this readme file and an `app.py` file containing an simple RESTful API with Python and Flask. 
-This Sample app exposes a REST endpoint that returns the following JSON payload with the current timestamp and static message:
+This sample app exposes a REST endpoint that returns the following JSON payload with the current timestamp and static message:
 
 `{
   "message": "Automate all the things!", 
@@ -14,9 +14,9 @@ The program uses standard and third party python libraries, such as datetime and
 If you would like to use a conda environment. Setup the conda environment by using the **environment.yml** file.
 
 To do so:
-1. Simply unzip the file and within the cs6475 directory use the command:
+1. Install the virtual environment with the CLI command:
 `conda env create -f environment.yml`
-2. Activate the new environment:
+2. Use the new environment:
 `conda activate sample-app`
 3. Verify that the new environment was installed correctly:
 `conda env list`
@@ -27,3 +27,5 @@ To do so:
 `python app.py`
 3. Curl the endpoint in another terminal window:
 `curl -i http://localhost:5000/`
+
+You should get back a JSON payload. 

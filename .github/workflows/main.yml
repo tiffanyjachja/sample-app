@@ -22,9 +22,9 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs Pytest 
-      - uses: fylein/python-pytest-github-action@v1
+      - uses: cclauss/GitHub-Action-for-pytest@master
         with:
-          args: pip3 install -r requirements.txt && pytest test/unit
+          args: pip3 install -r requirements.txt && pytest
 
       - name: Publish Docker
         uses: elgohr/Publish-Docker-Github-Action@2.14

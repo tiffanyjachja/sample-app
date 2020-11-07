@@ -32,5 +32,23 @@ jobs:
           name: tiffanyjachja/apps_repo:sample-app
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set K8s Context
+        uses: azure/k8s-set-context@v1
+        with:
+          method: kubeconfig
+          kubeconfig: ${{ secrets.KUBE_CONFIG_DATA }}
+        id: setcontext
+      - uses: Azure/k8s-deploy@v1
+        with:
+          namespace: 'myapp'
+          manifests: |
+            deployment.yaml
+            service.yaml
+          images: 'tiffanyjachja/apps_repo:sample-app'
+          kubectl-version: 'latest'
+      
 
 

@@ -34,11 +34,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Set K8s Context
-        uses: azure/k8s-set-context@v1
+        uses: azure/k8s-actions/k8s-set-context@master
         with:
-          method: kubeconfig
           kubeconfig: ${{ secrets.KUBE_CONFIG_DATA }}
-        id: setcontext
+
       - uses: Azure/k8s-deploy@v1
         with:
           manifests: |

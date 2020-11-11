@@ -1,4 +1,4 @@
-name: simple-app
+name: sample-app
 channels:
   - defaults
 dependencies:
@@ -24,5 +24,16 @@ dependencies:
   - wheel=0.35.1=py_0
   - xz=5.2.5=h1de35cc_0
   - zlib=1.2.11=h1de35cc_3
-prefix: /Users/tjachja/opt/anaconda3/envs/simple-app
-
+  - pip:
+    - attrs==20.3.0
+    - importlib-metadata==2.0.0
+    - iniconfig==1.1.1
+    - packaging==20.4
+    - pluggy==0.13.1
+    - py==1.9.0
+    - pyparsing==2.4.7
+    - pytest==6.1.2
+    - six==1.15.0
+    - toml==0.10.2
+    - zipp==3.4.0
+prefix: /Users/tjachja/opt/anaconda3/envs/sample-app

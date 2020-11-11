@@ -1,4 +1,4 @@
-name: sample-app
+name: simple-app
 channels:
   - defaults
 dependencies:
